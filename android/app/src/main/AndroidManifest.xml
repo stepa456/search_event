@@ -1,9 +1,17 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
     <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <uses-permission android:name="android.permission.ACESS_FILE_STORAGE"/>
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
     <application
         android:label="event_management_app"
+        android:enableOnBackInvokedCallback="true"
         android:name="${applicationName}"
-        android:icon="@mipmap/ic_launcher">
+        android:icon="@mipmap/ic_launcher"
+        >
         <activity
             android:name=".MainActivity"
             android:exported="true"
@@ -30,7 +38,7 @@
                 <action android:name="android.intent.action.VIEW" />
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
-                <data android:scheme="appwrite-callback-663720b80033c1455c17" />
+                <!-- <data android:scheme="appwrite-callback-663720b80033c1455c17" /> -->
             </intent-filter>
         </activity>
         <!-- Don't delete the meta-data below.
